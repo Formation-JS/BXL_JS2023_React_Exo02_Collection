@@ -1,4 +1,5 @@
 import clsx from 'clsx/lite';
+import PropTypes from 'prop-types';
 import style from './product-list.module.css';
 import Price from '../price/price.jsx';
 
@@ -24,6 +25,19 @@ const ProductList = ({products}) => {
             {productsJSX}
         </section>
     )
+};
+
+ProductList.defaultProps = {
+    products: []
+};
+
+ProductList.propTypes = {
+    products: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        discount: PropTypes.bool.isRequired
+    }))
 };
 
 export default ProductList;
