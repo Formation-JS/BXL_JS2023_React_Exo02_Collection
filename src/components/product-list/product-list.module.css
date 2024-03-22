@@ -1,0 +1,25 @@
+.product {
+    border: solid 1px orange;
+    padding: 0.5em;
+    margin-bottom: 1ch;
+}
+
+.product:hover {
+    background-color: cornsilk;
+}
+
+.product p {
+    margin: 0.2em;
+}
+
+.product .product-name {
+    font-weight: bold;
+}
+
+.discount {
+    color: crimson;
+}
+
+.price-font {
+    font-family: 'Consolas';
+}
